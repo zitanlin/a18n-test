@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import a18n from "a18n";
+
+a18n.addLocaleResource('zh', require('./locales/zh-CN.json'));
+a18n.addLocaleResource('en', require('./locales/en.json'));
 
 ReactDOM.render(
   <React.StrictMode>
