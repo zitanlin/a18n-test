@@ -6,15 +6,15 @@ import { useEffect, useState } from 'react';
 function App() {
   const [language, setLanguage] = useState('zh');
   useEffect(async () => {
-    await a18n.setLocale(language);
-    setLanguage(language);
+    console.log('---- use effect = ', language)
+    a18n.setLocale('zh');
   }, []);
 
   const changeLanguage = async () => {
+    console.log('--- language = ', language);
     const temp = language === 'zh' ? 'en' : 'zh';
+    a18n.setLocale(temp);
     setLanguage(temp);
-    await a18n.setLocale(temp);
-    await a18n.setLocale(temp);
   };
 
   return (
